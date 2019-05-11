@@ -1,0 +1,28 @@
+ [
+    {
+        "title" : "reLift-HTML: A very small (3kb) view library that now allows you to create Web Component, Custom Element, and helps you make any HTML page reactive without the bloat of big frameworks.",
+        "author" : "user",
+        "rate" : 200
+    },
+    {
+        "title" : "Why Apollo GraphQL’s writeQuery is necessary?" ,
+        "author" : "user1",
+        "rate" : 150
+    },
+    {
+        "title" : "How to avoide bad code in javascript" ,
+        "author" : "user_27",
+        "rate" : 120
+    },
+    {
+        "title" : "Tutorial: How to create JavaScript desktop programs with NW.js" ,
+        "author" : "user_bs7",
+        "rate" : 190
+    },
+    {
+        "title" : "3 reasons why to use server-side rendering with JavaScript in your 2019 application" ,
+        "author" : "user_kd4",
+        "rate" : 100
+    }
+
+]
