@@ -49,19 +49,47 @@ fetch("history.json")
 const c_time = document.getElementById('time');
 var d = new Date();
     h = (d.getHours()<10?'0':'') + d.getHours(),
-    m = (d.getMinutes()<10?'0':'') + d.getMinutes(),
-    apmpm = h >=12 ? 'Pm' : 'Am';
+    m = (d.getMinutes()<10?'0':'') + d.getMinutes();
 var time = document.createElement('span');
 time.classList.add('timer');
 c_time.appendChild(time)
 const timer = document.querySelector('.timer');
-timer.innerHTML =  h + ":" + m + " " + apmpm;
+timer.innerHTML =  h + ":" + m + " ";
+var date = document.createElement('span');
+var months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+var currentDate = new Date()
+var day = currentDate.getDate()
+var month = currentDate.getMonth()
+var year = currentDate.getFullYear()
+var ico = document.createElement('i');
+var ico_del = document.createElement('i');
+var message = document.createElement('p');
+var message_hide = document.createElement('a');
+message_hide.setAttribute('href' , "javascript:hide()")
+message_hide.classList.add("hide_link");
+message_hide.textContent = "got it! Don't show me again";
+function hide(){
+    document.querySelector('.hide_link').style.display='none'
+    document.querySelector('.message').style.display='none'
+ }
+ico.classList.add('fas');
+ico.classList.add('fa-question-circle');
+ico_del.classList.add('fas');
+ico_del.classList.add('fa-times-circle');
+message.textContent = `did you know you can add CUSTOM LINKS to display in this section ?
+open the settings panel and add the urls of your favorite sites the 'CUSTOM LINKS' textarea`;
+message.classList.add('message');
+date.classList.add('date');
+date.textContent=months[month] + " " + day + ", " + year;
+c_time.appendChild(date)
+message.prepend(ico)
+message_hide.prepend(ico_del)
+c_time.appendChild(message)
+c_time.appendChild(message_hide)
 function updateTime(){
     var d = new Date();
     h = (d.getHours()<10?'0':'') + d.getHours(),
     m = (d.getMinutes()<10?'0':'') + d.getMinutes(),
-    apmpm = h >=12 ? 'Pm' : 'Am';
-    timer.innerHTML =  h + ":" + m + " " + apmpm;
+    timer.innerHTML =  h + ":" + m + " ";
 }
 setInterval(updateTime , 1000)
-

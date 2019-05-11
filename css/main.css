@@ -202,10 +202,11 @@ body {
 
 .center-sec {
   background-color: #282a36;
-  width: 45%;
+  width: 42%;
   height: 100%;
   display: flex;
   flex-direction: column;
+  float: left;
 }
 .center-sec .header {
   height: 10%;
@@ -216,8 +217,9 @@ body {
 }
 .center-sec .history {
   width: 100%;
-  height: 50%;
+  height: 43%;
   overflow-y: scroll;
+  border-bottom: 0.1px solid #6272a4;
 }
 .center-sec .history ul.browser_hs {
   margin: 0;
@@ -235,6 +237,11 @@ body {
   text-decoration: none;
   max-width: 10px;
   overflow: hidden;
+  font-size: 14px;
+  transition: color ease 400ms;
+}
+.center-sec .history ul.browser_hs li a:hover {
+  color: #e6db74;
 }
 .center-sec .history ul.browser_hs li span.time {
   color: #888;
@@ -246,6 +253,7 @@ body {
   display: inline;
   float: left;
   margin-top: 4px;
+  clear: both;
   margin-right: 5px;
 }
 .center-sec .time-zone {
@@ -254,11 +262,94 @@ body {
   display: flex;
   align-items: center;
   flex-direction: column;
-  font-size: 100px;
 }
-.center-sec .time-zone span {
+.center-sec .time-zone .timer {
+  font-size: 100px;
   color: #6272a4;
-  font-weight: bolder;
+  font-weight: bolde;
+}
+.center-sec .time-zone .date {
+  color: #6272a4;
+  font-size: 24px;
+}
+.center-sec .time-zone .message {
+  font-size: 14px;
+  text-align: center;
+  width: 90%;
+  color: #6272a4;
+}
+.center-sec .time-zone .message i {
+  margin-right: 5px;
+  color: #ffb86c;
+}
+.center-sec .time-zone .hide_link {
+  color: #ffb86c;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+.center-sec .time-zone .hide_link i {
+  margin-right: 5px;
+}
+
+.github_issues {
+  width: 24.8%;
+  height: 100%;
+  background: #282a36;
+  float: left;
+}
+.github_issues .header {
+  height: 14%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+.github_issues .header span:first-child {
+  color: cyan;
+}
+.github_issues .header span:first-child i {
+  color: cyan;
+  margin-right: 5px;
+}
+.github_issues .header ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  margin-top: 10px;
+  text-align: center;
+}
+.github_issues .header ul li:first-child a {
+  color: #e6db74;
+  margin-right: 15px;
+  position: relative;
+}
+.github_issues .header ul li:first-child a::after {
+  content: "";
+  width: 0;
+  position: absolute;
+  bottom: -9px;
+  left: 18px;
+  transform: translate(-50%);
+  height: 0;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 7px solid #e6db74;
+  transform: rotate(180deg);
+}
+.github_issues .header ul li a {
+  color: #ff79c6;
+}
+.github_issues .header a {
+  text-decoration: none;
+  color: #6272a4;
+  font-size: 14px;
+  transition: color ease 500ms;
+}
+.github_issues .header a:hover {
+  color: #e6db74;
 }
 
 /*# sourceMappingURL=main.css.map */
