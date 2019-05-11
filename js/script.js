@@ -36,7 +36,7 @@ fetch("history.json")
     var time = document.createElement('span');
     time.classList.add('time');
     link.setAttribute('href' , '#');
-    icon.setAttribute('src' , 'images/facebook_fav.png');
+    icon.setAttribute('src' , 'images/chingu_logo.png');
     li.appendChild(icon);
     li.appendChild(link);
     li.appendChild(time);
@@ -93,3 +93,22 @@ function updateTime(){
     timer.innerHTML =  h + ":" + m + " ";
 }
 setInterval(updateTime , 1000)
+fetch("github_errors.json")
+.then(data => data.json())
+.then(err => {
+    for(i = 1 ; i<err.length ; i++){
+        const repos = document.querySelector('.repos');
+        const li = document.createElement('li');
+        li.classList.add('error');
+        const repo_name = document.createElement('span');
+        const err_num = document.createElement('span');
+        const error = document.createElement('span');
+        repo_name.textContent = "Repo: " + err[i].title;
+        err_num.textContent = "issue " + "#" + err[i].number;
+        error.textContent = err[i].error;
+        li.appendChild(repo_name);
+        li.appendChild(err_num);
+        li.appendChild(error);
+        repos.appendChild(li)
+    }
+})

@@ -168,7 +168,6 @@ body{
     .header{
         height: 5%;
         display: flex;
-        align-items: flex-end;
         justify-content: center;
         padding-top: 20px;
 
@@ -236,9 +235,9 @@ body{
     }
     .history{
         width: 100%;
-        height: 43%;
+        height: 40%;
         overflow-y: scroll;
-        border-bottom: 0.1px solid $text-color;
+        border-bottom: 0.1px solid #44475a;
         ul.browser_hs{
             margin: 0;
             padding: 0;
@@ -312,12 +311,14 @@ body{
     }
 }
 .github_issues{
+    position: relative;
+    overflow: hidden;
     width: 24.8%;
     height:100%;
     background: #282a36;
     float: left;
     .header{
-        height: 14%;
+        height: 15%;
         width: 100%;
         display:flex;
         align-items:center;
@@ -359,7 +360,12 @@ body{
            li a{
                color:#ff79c6;
            }
+           li:last-child a:hover{
+                   color:#2ecc71;
+
+           }
         }
+
         a{
             text-decoration: none;
             color: $text-color;
@@ -369,5 +375,79 @@ body{
                 color:#e6db74;
             }
         }
+    }
+    .items::after{
+        content:'';
+        width: 100%;
+        display: inline-block;
+        background: #44475a;
+        height:1px;
+    }
+    .items{
+        overflow-y: scroll;
+        height: 50%;
+        padding-left: 25px;
+        margin-top: 25px;
+    }
+    .repos .error::before{
+        content: '';
+        transition: background-color ease 500ms;
+        position: absolute;
+        left: -15px;
+        display: inline-block;
+        width: 3px;
+        background:#44475a;
+        height: 100%;
+    }
+    .repos .error:hover::before{
+        background-color: #2ecc71;
+    }
+    .error{
+        position: relative;
+        margin: 25px 0;
+    }
+    .ads{
+        position: absolute;
+        bottom: 0;
+        left:50%;
+        transform: translate(-50% );
+        // width: 70%;
+        // height: 25%;
+        cursor: pointer;
+    }
+    .ads::after{
+        transition: all ease 300ms;
+            content:'';
+            width: 3px;
+            background:#44475a;
+            height: 90%;
+            position: absolute;
+            left:-5%;
+    }
+    .ads:hover::after{
+        background-color: #2ecc71;
+    }
+    .repos{
+     margin-top: 45px;
+     list-style: none;
+     li{
+        cursor: pointer;
+         font-size:14px;    
+         span{
+             display: block;
+             margin: 5px 0;
+         }
+         span:first-child{
+             color:$text-color;
+         }
+         span:nth-child(2){
+             color:#e6db74;
+         }
+         span:last-child{
+             color:#fff;
+             width:60%;
+         }
+     }
+     
     }
 }
