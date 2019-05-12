@@ -244,7 +244,7 @@ body {
 .center-sec .history ul.browser_hs li span.time {
   color: #888;
   position: absolute;
-  right: 10px;
+  right: 0;
 }
 .center-sec .history ul.browser_hs li img {
   width: 15px;
@@ -302,7 +302,7 @@ body {
   width: 100%;
   display: flex;
   align-items: center;
-  justify-content: flex-end;
+  justify-content: center;
   flex-direction: column;
 }
 .github_issues .header span:first-child {
