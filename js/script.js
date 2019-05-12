@@ -112,3 +112,4 @@ fetch("github_errors.json")
         repos.appendChild(li)
     }
 })
+console.log(document.referrer)
