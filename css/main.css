@@ -15,13 +15,13 @@
 }
 
 body, html {
-  font-family: "Segoe UI", "Tahoma", "sans-serif";
   margin: 0;
   padding: 0;
 }
 
 body {
   height: 100vh;
+  font-family: monospace;
 }
 
 .left-nav {
@@ -218,6 +218,7 @@ body {
   height: 40%;
   overflow-y: scroll;
   border-bottom: 0.1px solid #44475a;
+  position: relative;
 }
 .center-sec .history ul.browser_hs {
   margin: 0;
@@ -228,12 +229,11 @@ body {
 }
 .center-sec .history ul.browser_hs li {
   margin-bottom: 25px;
-  position: relative;
+  max-width: 490px;
 }
 .center-sec .history ul.browser_hs li a {
   color: #6272a4;
   text-decoration: none;
-  max-width: 10px;
   overflow: hidden;
   font-size: 14px;
   transition: color ease 400ms;
@@ -436,6 +436,9 @@ body {
     padding-top: 25px;
   }
   .center-sec .time-zone {
+    height: 100%;
+  }
+  .center-sec .history {
     height: 100%;
   }
 

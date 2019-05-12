@@ -26,12 +26,12 @@ $text-color:#6272a4;
     height: 0px;
 }
 body,html{
-    font-family: "Segoe UI", 'Tahoma', 'sans-serif';
     margin: 0;
     padding: 0;
 }
 body{
     height: 100vh;
+    font-family:monospace
 }
 .left-nav{
     display: flex;
@@ -237,6 +237,7 @@ body{
         height: 40%;
         overflow-y: scroll;
         border-bottom: 0.1px solid #44475a;
+        position: relative;
         ul.browser_hs{
             margin: 0;
             padding: 0;
@@ -245,11 +246,10 @@ body{
             flex-flow:column ;
             li{
                 margin-bottom: 25px;
-                position: relative;
+                max-width: 490px;
                 a{
                     color: $text-color;
                     text-decoration: none;
-                    max-width:10px;
                     overflow: hidden;
                     font-size:14px;
                     transition: color ease 400ms;
@@ -459,6 +459,9 @@ body{
         padding-top: 25px;
         .time-zone{
             height: 100%
+        }
+        .history{
+            height: 100%;
         }
     }
     .reddit-news-feed{
