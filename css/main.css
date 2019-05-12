@@ -31,7 +31,7 @@ body {
   background-color: #44475a;
   float: left;
   height: 100%;
-  width: 10%;
+  width: 150px;
   position: relative;
 }
 .left-nav .nv-items {
@@ -149,8 +149,7 @@ body {
   overflow-y: scroll;
   background-color: #282a36;
   height: 100%;
-  float: left;
-  width: 22%;
+  width: 25%;
 }
 .reddit-news-feed .header {
   height: 5%;
@@ -201,11 +200,11 @@ body {
 
 .center-sec {
   background-color: #282a36;
-  width: 42%;
+  width: 50%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  float: left;
+  overflow: hidden;
 }
 .center-sec .header {
   height: 10%;
@@ -294,10 +293,9 @@ body {
 .github_issues {
   position: relative;
   overflow: hidden;
-  width: 24.8%;
+  width: 25%;
   height: 100%;
   background: #282a36;
-  float: left;
 }
 .github_issues .header {
   height: 15%;
@@ -425,6 +423,11 @@ body {
 .github_issues .repos li span:last-child {
   color: #fff;
   width: 60%;
+}
+
+.container {
+  display: flex;
+  height: 100%;
 }
 
 /*# sourceMappingURL=main.css.map */
