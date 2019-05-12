@@ -430,4 +430,31 @@ body {
   height: 100%;
 }
 
+@media screen and (max-width: 848px) {
+  .center-sec {
+    width: 100%;
+    padding-top: 25px;
+  }
+  .center-sec .time-zone {
+    height: 100%;
+  }
+
+  .reddit-news-feed {
+    width: 100%;
+  }
+
+  .github_issues {
+    width: 100%;
+    padding-top: 25px;
+  }
+
+  body {
+    height: 200vh;
+  }
+
+  .container {
+    flex-direction: column;
+  }
+}
+
 /*# sourceMappingURL=main.css.map */
